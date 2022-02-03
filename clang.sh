@@ -30,11 +30,11 @@ tar -xf gcc32.tar.gz -C $GCCbPath
 #Main2
 export TZ="Asia/Jakarta"
 KERNEL_ROOTDIR=$(pwd) # IMPORTANT ! Fill with your kernel source root directory.
-DEVICE_CODENAME=merlin
-KERNEL_DEFCONFIG=merlin_defconfig
-export KERNELNAME=Strelica
-export KBUILD_BUILD_USER=Alicia # Change with your own name or else.
-export KBUILD_BUILD_HOST=KorbanPerasaan # Change with your own hostname.
+DEVICE_CODENAME=lancelot
+KERNEL_DEFCONFIG=lancelot_defconfig
+export KERNELNAME=JRE206-ED101
+export KBUILD_BUILD_USER=Soni # Change with your own name or else.
+export KBUILD_BUILD_HOST=RyzerKentang # Change with your own hostname.
 IMAGE=$(pwd)/out/arch/arm64/boot/Image.gz
 CLANG_VER="$("$ClangPath"/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')"
 LLD_VER="$("$ClangPath"/bin/ld.lld --version | head -n 1)"
