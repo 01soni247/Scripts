@@ -5,16 +5,16 @@
 
 echo "Downloading few Dependecies . . ."
 # Kernel Sources
-git clone --depth=1 https://github.com/rubyzee/AliceTC AliceTC
+git clone --depth=1 https://github.com/Redmi-MT6768/android_kernel_xiaomi_mt6768 twelve
 
 # Main Declaration
-KERNEL_NAME=Strelica
+KERNEL_NAME=JRE205-ED101
 KERNEL_ROOTDIR=$(pwd) # IMPORTANT ! Fill with your kernel source root directory.
-DEVICE_CODENAME=Merlin
-DEVICE_DEFCONFIG=merlin_defconfig # IMPORTANT ! Declare your kernel source defconfig file here.
+DEVICE_CODENAME=Lancelot
+DEVICE_DEFCONFIG=lancelot_defconfig # IMPORTANT ! Declare your kernel source defconfig file here.
 CLANG_ROOTDIR=$(pwd)/AliceTC # IMPORTANT! Put your clang directory here.
-export KBUILD_BUILD_USER=Alicia # Change with your own name or else.
-export KBUILD_BUILD_HOST=XZI-TEAM # Change with your own hostname.
+export KBUILD_BUILD_USER=Soni # Change with your own name or else.
+export KBUILD_BUILD_HOST=JR205 # Change with your own hostname.
 CLANG_VER="$("$CLANG_ROOTDIR"/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')"
 LLD_VER="$("$CLANG_ROOTDIR"/bin/ld.lld --version | head -n 1)"
 export KBUILD_COMPILER_STRING="$CLANG_VER with $LLD_VER"
